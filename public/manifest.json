@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "RNGesus",
+  "name": "RNGesus: May The Odds Forever Be In Your Favor",
   "icons": [
     {
       "src": "favicon.ico",
