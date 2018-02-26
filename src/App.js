@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import NavBar from './NavBar';
+import InputBox from './InputBox';
 import './App.css';
 
 
@@ -13,7 +14,7 @@ class App extends Component {
           <h1 className="App-title">Dungeons & Dragons Dice Roller</h1>
         </header>
         <p className="App-intro">
-
+          <InputBox></InputBox>
           <input type="text" id="InputNumber1" value="2d6+10 Slashing + 2d6 Holy"></input>
           <button type="button" class="btn btn-danger" onclick="Main()">Roll</button>
           <span id="rollsMade"></span>
