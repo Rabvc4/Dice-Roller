@@ -15,12 +15,6 @@ class App extends Component {
         </header>
         <p className="App-intro">
           <InputBox></InputBox>
-          <input type="text" id="InputNumber1" value="2d6+10 Slashing + 2d6 Holy"></input>
-          <button type="button" class="btn btn-danger" onclick="Main()">Roll</button>
-          <span id="rollsMade"></span>
-          <span id="rollResult"></span>
-
-
         </p>
       </div>
     );

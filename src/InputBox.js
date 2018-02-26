@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class InputBox extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {value: ''};
+    this.state = {value: '2d6+10 Slashing + 2d6 Holy'};  //Make this part {value: ''} to initialize with empty field
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -14,7 +14,7 @@ class InputBox extends React.Component {
   }
 
   handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.value);
+    alert('Text was submitted: ' + this.state.value);
     event.preventDefault();
   }
 
@@ -22,10 +22,9 @@ class InputBox extends React.Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <label>
-          Name:
           <input type="text" value={this.state.value} onChange={this.handleChange} />
         </label>
-        <input type="submit" className="btn btn-danger" value="Submit" />
+        <input type="submit" className="btn btn-danger" value="Roll" />
       </form>
     );
   }
