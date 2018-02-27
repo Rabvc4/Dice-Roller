@@ -1,3 +1,7 @@
+body,p{
+  margin:0;
+}
+
 .chatroom{
   position: fixed;
   width:40vw;
@@ -33,12 +37,13 @@
   margin:10px 0 0;
   height:40vh;
   overflow-y:scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 .chatroom .chats .chat{
   background:hsla(0,0%,100%,.8);
   position:relative;
-  padding:5px 13px;
+  padding:5px 5px 5px 5px;
   font-size:14px;
   border-radius:10px;
   list-style:none;
@@ -60,6 +65,8 @@
 .chatroom .chats .chat.right{
   float:right;
   clear:both;
+  color: white;
+  background: rgb(213,54,0);
 }
 
 .chatroom .chats .chat a{

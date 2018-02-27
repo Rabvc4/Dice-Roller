@@ -10,35 +10,35 @@ class Chatroom extends React.Component {
 
         this.state = {
             chats: [{
-                username: "Kevin Hsu",
+                username: "Ryan Best",
                 content: <p>Hello World!</p>,
                 img: "http://i.imgur.com/Tj5DGiO.jpg",
             }, {
-                username: "Alice Chen",
+                username: "Austen Owens",
                 content: <p>Love it! :heart:</p>,
                 img: "http://i.imgur.com/Tj5DGiO.jpg",
             }, {
-                username: "Kevin Hsu",
-                content: <p>Check out my Github at https://github.com/WigoHunter</p>,
+                username: "Ryan Best",
+                content: <p>Non</p>,
                 img: "http://i.imgur.com/Tj5DGiO.jpg",
             }, {
-                username: "KevHs",
+                username: "Trey Lewis",
                 content: <p>Lorem ipsum dolor sit amet, nibh ipsum. Cum class sem inceptos incidunt sed sed. Tempus wisi enim id, arcu sed lectus aliquam, nulla vitae est bibendum molestie elit risus.</p>,
                 img: "http://i.imgur.com/ARbQZix.jpg",
             }, {
-                username: "Kevin Hsu",
+                username: "Ryan Best",
                 content: <p>So</p>,
                 img: "http://i.imgur.com/Tj5DGiO.jpg",
             }, {
-                username: "Kevin Hsu",
-                content: <p>Chilltime is going to be an app for you to view videos with friends</p>,
+                username: "Ryan Best",
+                content: <p>Look at us: we're figments of my imagination, but that doesn't mean we aren't having a good time!</p>,
                 img: "http://i.imgur.com/Tj5DGiO.jpg",
             }, {
-                username: "Kevin Hsu",
+                username: "Ryan Best",
                 content: <p>You can sign-up now to try out our private beta!</p>,
                 img: "http://i.imgur.com/Tj5DGiO.jpg",
             }, {
-                username: "Alice Chen",
+                username: "Austen Owens",
                 content: <p>Definitely! Sounds great!</p>,
                 img: "http://i.imgur.com/Tj5DGiO.jpg",
             }]
@@ -64,7 +64,7 @@ class Chatroom extends React.Component {
 
         this.setState({
             chats: this.state.chats.concat([{
-                username: "Kevin Hsu",
+                username: "Ryan Best",
                 content: <p>{ReactDOM.findDOMNode(this.refs.msg).value}</p>,
                 img: "http://i.imgur.com/Tj5DGiO.jpg",
             }])
@@ -74,7 +74,7 @@ class Chatroom extends React.Component {
     }
 
     render() {
-        const username = "Kevin Hsu";
+        const username = "Ryan Best";
         const { chats } = this.state;
 
         return (
