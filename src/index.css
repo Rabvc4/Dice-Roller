@@ -1,5 +1,12 @@
 body {
   margin: 0;
   padding: 0;
+  height:100%;
   font-family: sans-serif;
+  overflow:hidden;
+}
+
+div.wrap {
+  height:100%;
+  overflow:hidden;
 }

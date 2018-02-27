@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import NavBar from './NavBar';
 import Game from './Game';
 import InputBox from './InputBox';
+import Chatroom from './Chatroom';
 import './App.css';
 
 
@@ -18,6 +19,7 @@ class App extends Component {
 
           <Game></Game>
           <InputBox></InputBox>
+          <Chatroom></Chatroom>
 
         </p>
       </div>
