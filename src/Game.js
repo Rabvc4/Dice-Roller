@@ -1,6 +1,9 @@
 import React from 'react';
 import './Game.css';
 
+const xCoordinate = 4
+const yCoordinate = 4
+
 class Square extends React.Component {
   render() {
     return (
@@ -15,7 +18,7 @@ class Board extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      squares: Array(9).fill(null),
+      squares: Array(xCoordinate*yCoordinate).fill(null),
     };
   }
 
@@ -34,6 +37,17 @@ class Board extends React.Component {
     );
   }
 
+  boardRow(i) {
+    return (
+      <div className="board-row">
+        {this.renderSquare(i)}
+        {this.renderSquare(i+1)}
+        {this.renderSquare(i+2)}
+      </div>
+    );
+  }
+
+
   render() {
     const status = 'Next player: X';
 
@@ -44,16 +58,9 @@ class Board extends React.Component {
           {this.renderSquare(1)}
           {this.renderSquare(2)}
         </div>
-        <div className="board-row">
-          {this.renderSquare(3)}
-          {this.renderSquare(4)}
-          {this.renderSquare(5)}
-        </div>
-        <div className="board-row">
-          {this.renderSquare(6)}
-          {this.renderSquare(7)}
-          {this.renderSquare(8)}
-        </div>
+        {this.boardRow(3)}
+        {this.boardRow(6)}
+
         <div className="status">{status}</div>
       </div>
     );
