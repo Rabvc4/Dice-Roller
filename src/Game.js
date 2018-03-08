@@ -37,16 +37,15 @@ class Board extends React.Component {
     );
   }
 
-  boardRow(i) {
-    for (var i=0; i<10; i++) {
-      lis.push(<li><a href="#">{i + 1}</a></li>);
+  boardRow(xCoord) {
+    var lis = [];
+    for (var i=0; i<xCoord; i++) {
+      lis.push(this.renderSquare(i));
     }
 
     return (
       <div className="board-row">
-        {this.renderSquare(i)}
-        {this.renderSquare(i+1)}
-        {this.renderSquare(i+2)}
+        {lis}
       </div>
     );
   }
