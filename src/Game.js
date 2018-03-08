@@ -38,6 +38,10 @@ class Board extends React.Component {
   }
 
   boardRow(i) {
+    for (var i=0; i<10; i++) {
+      lis.push(<li><a href="#">{i + 1}</a></li>);
+    }
+
     return (
       <div className="board-row">
         {this.renderSquare(i)}
