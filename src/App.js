@@ -15,13 +15,13 @@ class App extends Component {
           <img src="https://cdn1.iconfinder.com/data/icons/sin-city-memories/128/dice-red-256.png" className="App-logo" alt="logo" />
           <h1 className="App-title">Dungeons & Dragons Dice Roller</h1>
         </header>
-        <p className="App-intro">
+        <div className="App-intro">
 
           <Game></Game>
           <InputBox></InputBox>
           <Chatroom></Chatroom>
 
-        </p>
+        </div>
       </div>
     );
   }

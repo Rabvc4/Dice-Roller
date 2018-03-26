@@ -1,8 +1,8 @@
 import React from 'react';
 import './Game.css';
 
-const xCoordinate = 4
-const yCoordinate = 4
+const xCoordinate = 10
+const yCoordinate = 10
 
 class Square extends React.Component {
   render() {
@@ -24,7 +24,8 @@ class Board extends React.Component {
 
   handleClick(i) {
     const squares = this.state.squares.slice();
-    squares[i] = 'X';
+    squares[i] = i;
+    /* squares[i] = 'X';*/
     this.setState({squares: squares});
   }
 
@@ -37,12 +38,12 @@ class Board extends React.Component {
     );
   }
 
-  boardRow(xCoord) {
+  boardRow(NewCoord, xCoord) {
+    var Start = NewCoord - xCoord;
     var lis = [];
-    for (var i=0; i<xCoord; i++) {
-      lis.push(this.renderSquare(i));
+    for (Start; Start<NewCoord; Start++) {
+      lis.push(this.renderSquare(Start));
     }
-
     return (
       <div className="board-row">
         {lis}
@@ -50,19 +51,26 @@ class Board extends React.Component {
     );
   }
 
+  Grid(xCoord, yCoord) {
+    var NewCoord = xCoord;
+    var lis = [];
+    for (var i=0; i<yCoord; i++) {
+      lis.push(this.boardRow(NewCoord, xCoord));
+      NewCoord += xCoord;
+    }
+    return (
+      <div className="game-board">
+        {lis}
+      </div>
+    );
+  }
 
   render() {
     const status = 'Next player: X';
 
     return (
       <div>
-        <div className="board-row">
-          {this.renderSquare(0)}
-          {this.renderSquare(1)}
-          {this.renderSquare(2)}
-        </div>
-        {this.boardRow(3)}
-        {this.boardRow(6)}
+        {this.Grid(xCoordinate,yCoordinate)}
 
         <div className="status">{status}</div>
       </div>
