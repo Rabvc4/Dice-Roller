@@ -21,8 +21,8 @@ class NavBar extends Component {
                 <a className="nav-link disabled" href="#">Disabled</a>
               </li>
             </ul>
-            <form className="form-inline mt-2 mt-md-0">
-              <input className="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"></input>
+            <form className="form-inline mt-2 mt-md-0" action="https://roll20.net/compendium/dnd5e/searchbook/" method="GET" target="_blank">
+              <input className="form-control mr-sm-2" type="text" name="terms" placeholder="Search Roll20" aria-label="Search"></input>
               <button className="btn btn-outline-danger my-2 my-sm-0" type="submit">Search</button>
             </form>
           </div>
