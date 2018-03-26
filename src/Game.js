@@ -1,7 +1,7 @@
 import React from 'react';
 import './Game.css';
 
-const xCoordinate = 10
+const xCoordinate = 9
 const yCoordinate = 10
 
 class Square extends React.Component {
